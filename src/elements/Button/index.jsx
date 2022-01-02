@@ -10,7 +10,7 @@ function Button(props) {
     onClick, type, isExternal, children, href, style, target, isLoading, isDisabled,
   } = props;
 
-  const classess = ['btn', className];
+  const classess = [className];
   if (isPrimary) classess.push('btn-primary');
   if (isSmall) classess.push('btn-sm');
   if (isLarge) classess.push('btn-lg');
@@ -60,6 +60,7 @@ Button.propTypes = {
   children: propTypes.oneOfType([
     propTypes.arrayOf(propTypes.oneOfType([propTypes.string, propTypes.object])),
     propTypes.string,
+    propTypes.element,
   ]),
 };
 
