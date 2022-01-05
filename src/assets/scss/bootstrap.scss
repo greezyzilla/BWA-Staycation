@@ -7,6 +7,8 @@
 
 // scss-docs-start import-stack
 // Configuration
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "variable-colors";
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -151,6 +153,14 @@ section{
         span{
             font-size: .875rem;
         }
+
+        a{
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 
     &.card-featured{
@@ -198,14 +208,6 @@ section{
             display: flex;
             justify-content: flex-end;
             flex-direction: column;
-            
-            a{
-                text-decoration: none;
-
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
         }
 
         &:hover{
@@ -221,5 +223,44 @@ section{
                 transform: scale(1);
             }
         }
+    }
+}
+
+.testimonial-hero, .testimonial-hero img {
+    width: 365px;
+    height: 500px;
+}
+
+footer{
+    border-top: 1px solid $gray-200;
+    padding-top: 50px;
+
+    .brand-tagline{
+        margin-top: 8px;
+        color: $gray-500;
+        font-weight: 300;
+    }
+
+    .list-group-item{
+        padding: .3125rem 0;
+        border: none;
+        
+        a, span{
+            text-decoration: none;
+            color: $gray-500;
+            font-weight: 300;
+        }
+
+        a{
+            &:hover, &:focus{
+                color: $gray-800;
+            }
+        }
+    }
+
+    .copyrights{
+        margin: 50px 0;
+        font-weight: 300;
+        color: $gray-500;
     }
 }
